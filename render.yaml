@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: term-quote-generator
+    env: docker
+    plan: free
+    repo: <REPLACE_WITH_YOUR_GITHUB_REPO_URL>
+    branch: main
+    buildCommand: ""
+    startCommand: ""

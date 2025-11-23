@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Term Quote Generator</title>
+  </head>
+  <body style="font-family: Arial; padding: 30px;">
+    <h2>Term Quote Generator</h2>
+
+    <h3>Option 1 — Paste a single Google Sheet URL (contains both sheets)</h3>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="text" name="sheet_url" placeholder="https://docs.google.com/spreadsheets/d/...." size="80">
+      <button type="submit">Generate from Google Sheet</button>
+    </form>
+
+    <hr>
+
+    <h3>Option 2 — Paste two separate Google Sheet URLs</h3>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="text" name="client_sheet_url" placeholder="Client sheet URL" size="60"><br><br>
+      <input type="text" name="premium_sheet_url" placeholder="Premiums sheet URL" size="60"><br><br>
+      <button type="submit">Generate from two Google Sheets</button>
+    </form>
+
+    <hr>
+
+    <h3>Option 3 — Upload local files</h3>
+    <form method="POST" enctype="multipart/form-data">
+      <label>Client Excel (one sheet)</label><br>
+      <input type="file" name="client_file" accept=".xlsx"><br><br>
+      <label>Premiums Excel (one sheet)</label><br>
+      <input type="file" name="premium_file" accept=".xlsx"><br><br>
+      <button type="submit">Upload & Generate</button>
+    </form>
+
+  </body>
+</html>
